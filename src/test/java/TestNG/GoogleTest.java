@@ -1,4 +1,6 @@
 package TestNG;
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +19,20 @@ public class GoogleTest {
 	    System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sharon\\Downloads\\chromedriver\\chromedriver.exe");	
 	    driver = new ChromeDriver();
 	   // driver.manage().window().maximize();
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	    driver.get("http://www.google.com/");
+	    
+	    
+	    //PageloadTimeOut
+	  //  driver.manage().timeouts().pageLoadTimeout(100, SECONDS);
+	    
+	    //ExpectedConditions
+	  //  WebDriverWait wait = new WebDriverWait(driver, 10);
+	    
+	 //   WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.id(>someid>)));
+	    
+	   
+	    
 	}
 	
 	 @Test
