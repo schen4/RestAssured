@@ -48,7 +48,7 @@ public class GoogleTest {
 
 	}
 	
-	 @Test(dataProvider="searchKeyWordsProvider")
+	 @Test(dataProvider="searchKeyWordsProvider", priority=2)
 	  public void testGoogleSearch(String keyWords) throws InterruptedException {
 	   	    
 	    Thread.sleep(5000);  // Let the user actually see something!
@@ -60,7 +60,7 @@ public class GoogleTest {
 	    
 	  }
 	 
-	 @Test
+	 @Test(priority=1)
 	 public void testGoogleTitle() {
 		 String title = driver.getTitle();
 		 System.out.println(title);
