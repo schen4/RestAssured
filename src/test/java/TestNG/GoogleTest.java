@@ -1,4 +1,6 @@
 package TestNG;
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -35,12 +37,23 @@ public class GoogleTest {
 	    
 	}
 	
-	 @Test
-	  public void testGoogleSearch() throws InterruptedException {
+	@DataProvider
+	public Iterator<String> searchKeyWordsProvider() {
+		ArrayList<String> keyWords = new ArrayList<String>();
+		keyWords.add("Java");
+		keyWords.add("Python");
+		keyWords.add("Ruby");
+		Iterator<String> it = keyWords.iterator();
+		return it;
+
+	}
+	
+	 @Test(dataProvider="searchKeyWordsProvider")
+	  public void testGoogleSearch(String keyWords) throws InterruptedException {
 	   	    
 	    Thread.sleep(5000);  // Let the user actually see something!
 	    WebElement searchBox = driver.findElement(By.name("q"));
-	    searchBox.sendKeys("ChromeDriver");
+	    searchBox.sendKeys(keyWords);
 	    searchBox.submit();
 	    Thread.sleep(5000);  // Let the user actually see something!
 	   //driver.findElement(By.id("id"));
