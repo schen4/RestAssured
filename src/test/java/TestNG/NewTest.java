@@ -13,6 +13,7 @@ import static org.hamcrest.Matchers.*;
 import java.math.BigDecimal;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
@@ -32,26 +33,23 @@ public class NewTest {
 	  Assert.assertEquals(statusCode, 200);
   }*/
   
+  @Parameters({"API_ENDPOINT"})
   @Test 
-  public void Test2() {
-	  //Example: get("/lotto").then().body("lotto.lottoId", equalTo(5));
-	  given().get("https://reqres.in/api/users?page=2").then().body("data.id[0]", equalTo(9));
-	  given().
+  public void Test2(String url) {
+	 
+	  given().get(url).then().body("data.id[0]", equalTo(7));
+	/*  given().
       	formParam("formParamName", "value1").
       	queryParam("queryParamName", "value2").
       when().
-      	post("/something");
+      	post("/something");*/
   }
   
  /* public void Test3() {
 	  
-	 // get("/price").then().body("price", is(12.12f));
-	  given().
-      	config(RestAssured.config().jsonConfig(jsonConfig().numberReturnType(BIG_DECIMAL))).
-      when().
-      	get("/price").
-      then().
-      	body("price", is(new BigDecimal(12.12)));
+	  // return float
+	 // get("/price").then().body("price", is(12.12f));  
+
       	
      Authentication:
      -basic auth
