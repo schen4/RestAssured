@@ -18,7 +18,7 @@ public class GoogleTest {
 	@BeforeMethod
 	public void Setup() {
 		 // Optional. If not specified, WebDriver searches the PATH for chromedriver.
-	    System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sharon\\Downloads\\chromedriver\\chromedriver.exe");	
+	    System.setProperty("webdriver.chrome.driver", "/Users/sharon/Downloads/chromedriver");	
 	    driver = new ChromeDriver();
 	   // driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
