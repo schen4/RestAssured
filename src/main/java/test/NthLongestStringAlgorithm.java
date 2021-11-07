@@ -1,4 +1,4 @@
-package myTest;
+package test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ public class NthLongestStringAlgorithm
 {
     public static void main(String[] args)
     {
-        int n = 2;  //specify the Nth Longest String
+        int n = 1;  //specify the Nth Longest String
         List<String> list = new ArrayList<String>();
         list.add("Yuri");
         list.add("Ron");
@@ -16,8 +16,9 @@ public class NthLongestStringAlgorithm
         list.add("Longest");
         list.add("List");
         list.add("Contain");
-          
-        System.out.println( findNthLongestElement(list, n) );
+        
+        //Find out the Nth longest string in the list
+        System.out.println(n +"th longest string: " + findNthLongestElement(list, n) );
     }
   
     private static List<String> findNthLongestElement(List<String> list, int n)

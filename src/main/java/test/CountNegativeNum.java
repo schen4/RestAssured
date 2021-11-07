@@ -1,4 +1,4 @@
-package myTest;
+package test;
 
 public class CountNegativeNum {
 

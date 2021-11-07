@@ -1,4 +1,4 @@
-package myTest;
+package test;
 
 import java.util.Stack;
 import java.util.StringTokenizer;

@@ -1,4 +1,4 @@
-package myTest;
+package test;
 
 import java.util.Scanner;
 
@@ -9,17 +9,25 @@ public class ScannerTest {
 		Scanner sc = new Scanner(System.in);
 		// Initialize sum and count of input elements 
 		int sum = 0, count = 0;
+		
+		System.out.println("Please input integer number: ");
 
 		// Check if an int value is available 
 		 while (sc.hasNextInt())
 		 {
-		// Read an int value 
+		
+		// String input : sc.nextLine();
+		// Character input : sc.next().charAt(0);
+		// Read an int value: sc.nextInt(); sc.nextLong(); sc.nextDouble();
 		int num = sc.nextInt();
 		sum += num;
 		count++;
 		}
+		// encountered EOF, for instance, input character to end the loop in this case as 
 		sc.close();
-		int mean = sum / count;
+		int mean = sum/count;
+		System.out.println("Sum: " + sum);
+		System.out.println("Count: " + count);
 		System.out.println("Mean: " + mean);
 
 	}
