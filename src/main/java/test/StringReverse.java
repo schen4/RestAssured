@@ -1,5 +1,6 @@
 package test;
 
+import java.util.ArrayList;
 import java.util.Stack;
 import java.util.StringTokenizer;
 
@@ -38,23 +39,28 @@ public class StringReverse {
 		System.out.println(reverStr.toString());
 		
 		
-		
-		
+		System.out.println("Palindrome?" + isPalindrome("aabbaa"));		
 		
 	}
 	
-	//reverse number
-	 public static int reverseNum(int number)
-	    {
-	        int reverse = 0;
-	        int remainder = 0;
-	        do {
-	            remainder = number % 10;
-	            reverse = reverse * 10 + remainder;
-	            number = number / 10;
-	 
-	        } while (number > 0);
-	        return reverse;
-	    }
-
+	
+	public static boolean isPalindrome(String input) {
+		
+		String reversed = "";
+		
+		int len = input.length()-1;
+		
+		for(int i = 0; i< input.length(); i++) {
+			reversed = reversed + input.charAt(len-i);
+		}
+		
+		
+		System.out.println("Reversed string is: " + reversed);
+		
+		if(reversed.equals(input)) {
+			return true;
+		}else return false;
+	}
+	
+	
 }

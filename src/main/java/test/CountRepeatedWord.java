@@ -16,7 +16,7 @@ public class CountRepeatedWord {
         ArrayList<String> words = new ArrayList<String>();
             
         //Opens file in read mode    
-        FileReader file = new FileReader("data.txt ");    
+        FileReader file = new FileReader("/Users/sharon/Documents/data.txt");    
         BufferedReader br = new BufferedReader(file);    
             
         //Reads each line    

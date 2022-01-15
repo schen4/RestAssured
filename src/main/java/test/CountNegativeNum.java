@@ -9,7 +9,7 @@ public class CountNegativeNum {
 		int count = 0;
 		
 		for(int i : nums) {
-			if(i<0) count = count +1;
+			if(i<0) count++;
 		}
 		
 		System.out.println("The count of the negative number is: " +count);
